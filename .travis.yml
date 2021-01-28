@@ -9,4 +9,5 @@ cache:
 install:
   - npm ci
 script:
-  - npm run test
+  - node index.js
+  - npm test
