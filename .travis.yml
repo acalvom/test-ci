@@ -7,4 +7,6 @@ install:
   - npm install
   - npm ci
 script:
-  - npm test
+  - nohup npm run start &
+  - sleep 3
+  - npm run test
