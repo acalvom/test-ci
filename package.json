@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "mocha --recursive test",
+    "test": "mocha --recursive test --reporter mochawesome",
     "coverage": "nyc --reporter=text --reporter=lcov npm test"
   },
   "author": "",
@@ -16,6 +16,7 @@
     "mocha": "^8.2.1"
   },
   "devDependencies": {
+    "mochawesome": "^6.2.1",
     "nyc": "^15.1.0",
     "request": "^2.88.2"
   }
