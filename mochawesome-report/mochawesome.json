@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-01-29T13:28:40.798Z",
+    "end": "2021-01-29T13:28:40.839Z",
+    "duration": 41,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5fe2b3d2-6b01-4ecc-bd44-3ab2833ff31c",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Main page content",
+          "fullTitle": "Main page content",
+          "timedOut": false,
+          "duration": 27,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "request('http://localhost:8000' , function(error, response, body) {\n    expect(body).to.equal('Hello World!');\n    done();\n});",
+          "err": {},
+          "uuid": "5f16b860-483e-48ff-bb7d-399af292b429",
+          "parentUUID": "5fe2b3d2-6b01-4ecc-bd44-3ab2833ff31c",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Main page status",
+          "fullTitle": "Main page status",
+          "timedOut": false,
+          "duration": 3,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "request('http://localhost:8000' , function(error, response, body) {\n    expect(response.statusCode).to.equal(200);\n    done();\n});",
+          "err": {},
+          "uuid": "0ce0deb2-97fc-492f-a078-218275a6570d",
+          "parentUUID": "5fe2b3d2-6b01-4ecc-bd44-3ab2833ff31c",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "About page content",
+          "fullTitle": "About page content",
+          "timedOut": false,
+          "duration": 4,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "request('http://localhost:8000/about' , function(error, response, body) {\n    expect(response.statusCode).to.equal(404);\n    done();\n});",
+          "err": {},
+          "uuid": "c5212b81-b216-4093-9274-a8be46d3ceda",
+          "parentUUID": "5fe2b3d2-6b01-4ecc-bd44-3ab2833ff31c",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "5f16b860-483e-48ff-bb7d-399af292b429",
+        "0ce0deb2-97fc-492f-a078-218275a6570d",
+        "c5212b81-b216-4093-9274-a8be46d3ceda"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 34,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}
