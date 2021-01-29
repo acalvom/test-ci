@@ -10,7 +10,7 @@ install:
   - npm install
   - npm ci
 script:
-  - sonar-scanner -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=acalvom -Dsonar.login=$SONAR_TOKEN
+  - sonar-scanner -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=acalvom -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=test-ci
   - nohup npm run start &
   - sleep 3
   - npm run test
