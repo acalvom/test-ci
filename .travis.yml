@@ -1,12 +1,16 @@
 language: node_js
 node_js:
   - '14'
+jdk:
+  - oraclejdk8
 addons:
   chrome: stable
+  sonarcloud: true
 install:
   - npm install
   - npm ci
 script:
+  - sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dsonar.organization=acalvom -Dsonar.projectKey=test-ci -Dsonar.sources='./app' -X
   - nohup npm run start &
   - sleep 3
   - npm run test
