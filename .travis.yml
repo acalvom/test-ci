@@ -6,7 +6,7 @@ jdk:
 services:
   - mysql
 before_install:
-  - mysql -u root
+  - mysql -u root --password="" < test/travis.sql
 addons:
   chrome: stable
   sonarcloud: true
