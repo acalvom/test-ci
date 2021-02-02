@@ -3,6 +3,10 @@ node_js:
   - '14'
 jdk:
   - oraclejdk8
+services:
+  - mysql
+before_install:
+  - mysql -u miw_2020 --password=miw_2020
 addons:
   chrome: stable
   sonarcloud: true
