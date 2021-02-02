@@ -7,7 +7,7 @@ services:
   - mysql
 before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS test;'
-  - mysql -u root --password="" < test/travis.sql < app/database.js
+  - mysql -u root --password="" < test/travis.sql
 addons:
   chrome: stable
   sonarcloud: true
