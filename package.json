@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "database": "npm run ./app/database.js",
+    "database": "node ./app/database.js",
     "test": "mocha --recursive test --reporter mochawesome",
     "coverage": "nyc --reporter=text --reporter=lcov npm test"
   },
