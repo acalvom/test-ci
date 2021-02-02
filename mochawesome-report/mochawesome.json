@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 0,
-    "tests": 3,
-    "passes": 3,
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2021-01-29T13:28:40.798Z",
-    "end": "2021-01-29T13:28:40.839Z",
-    "duration": 41,
-    "testsRegistered": 3,
+    "start": "2021-02-02T17:19:11.552Z",
+    "end": "2021-02-02T17:19:11.594Z",
+    "duration": 42,
+    "testsRegistered": 4,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5fe2b3d2-6b01-4ecc-bd44-3ab2833ff31c",
+      "uuid": "561e86f4-1f3a-4d3f-8c13-0ff45e427d34",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -29,7 +29,7 @@
           "title": "Main page content",
           "fullTitle": "Main page content",
           "timedOut": false,
-          "duration": 27,
+          "duration": 21,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -38,8 +38,8 @@
           "context": null,
           "code": "request('http://localhost:8000' , function(error, response, body) {\n    expect(body).to.equal('Hello World!');\n    done();\n});",
           "err": {},
-          "uuid": "5f16b860-483e-48ff-bb7d-399af292b429",
-          "parentUUID": "5fe2b3d2-6b01-4ecc-bd44-3ab2833ff31c",
+          "uuid": "20f684ba-881e-4ff7-9ef7-93f73d3d843e",
+          "parentUUID": "561e86f4-1f3a-4d3f-8c13-0ff45e427d34",
           "isHook": false,
           "skipped": false
         },
@@ -47,7 +47,7 @@
           "title": "Main page status",
           "fullTitle": "Main page status",
           "timedOut": false,
-          "duration": 3,
+          "duration": 2,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -56,8 +56,8 @@
           "context": null,
           "code": "request('http://localhost:8000' , function(error, response, body) {\n    expect(response.statusCode).to.equal(200);\n    done();\n});",
           "err": {},
-          "uuid": "0ce0deb2-97fc-492f-a078-218275a6570d",
-          "parentUUID": "5fe2b3d2-6b01-4ecc-bd44-3ab2833ff31c",
+          "uuid": "3eae6424-ad5d-4948-8f2c-edc3649a47f5",
+          "parentUUID": "561e86f4-1f3a-4d3f-8c13-0ff45e427d34",
           "isHook": false,
           "skipped": false
         },
@@ -65,7 +65,7 @@
           "title": "About page content",
           "fullTitle": "About page content",
           "timedOut": false,
-          "duration": 4,
+          "duration": 3,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -74,22 +74,62 @@
           "context": null,
           "code": "request('http://localhost:8000/about' , function(error, response, body) {\n    expect(response.statusCode).to.equal(404);\n    done();\n});",
           "err": {},
-          "uuid": "c5212b81-b216-4093-9274-a8be46d3ceda",
-          "parentUUID": "5fe2b3d2-6b01-4ecc-bd44-3ab2833ff31c",
+          "uuid": "f23cf4b9-0791-420b-b135-ee7b17b41b9e",
+          "parentUUID": "561e86f4-1f3a-4d3f-8c13-0ff45e427d34",
           "isHook": false,
           "skipped": false
         }
       ],
-      "suites": [],
+      "suites": [
+        {
+          "uuid": "30ceedb4-530b-45fb-8d82-568d0e787ac7",
+          "title": "get all personal",
+          "fullFile": "C:\\Users\\andre\\Desktop\\MIW\\work-space\\fenw-ws\\test_ci\\test\\testChaiREST.js",
+          "file": "\\test\\testChaiREST.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should get all personal",
+              "fullTitle": "get all personal should get all personal",
+              "timedOut": false,
+              "duration": 10,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(url)\n    .get('/personal')\n    .end(function (err,res) {\n        console.log(res.body)\n        expect(res).to.have.status(200);\n        expect(res.body[0]).to.have.property('nombre','Fulanito');\n        done();\n        });",
+              "err": {},
+              "uuid": "111e7db2-8096-432e-9a32-a8b32df602d7",
+              "parentUUID": "30ceedb4-530b-45fb-8d82-568d0e787ac7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "111e7db2-8096-432e-9a32-a8b32df602d7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
       "passes": [
-        "5f16b860-483e-48ff-bb7d-399af292b429",
-        "0ce0deb2-97fc-492f-a078-218275a6570d",
-        "c5212b81-b216-4093-9274-a8be46d3ceda"
+        "20f684ba-881e-4ff7-9ef7-93f73d3d843e",
+        "3eae6424-ad5d-4948-8f2c-edc3649a47f5",
+        "f23cf4b9-0791-420b-b135-ee7b17b41b9e"
       ],
       "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 34,
+      "duration": 26,
       "root": true,
       "rootEmpty": false,
       "_timeout": 2000
