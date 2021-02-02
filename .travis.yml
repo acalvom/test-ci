@@ -19,7 +19,7 @@ install:
 script:
   - nohup npm run start &
   - sleep 3
-  - npm run ./app/database.js
+  - npm run database
   - npm run coverage
   - sonar-scanner -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=acalvom -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=acalvom_test-ci -X
 
