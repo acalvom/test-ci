@@ -6,7 +6,7 @@ jdk:
 services:
   - mysql
 before_install:
-  - mysql -u miw_2020 --password=miw_2020
+  - mysql -u root --password=""
 addons:
   chrome: stable
   sonarcloud: true
