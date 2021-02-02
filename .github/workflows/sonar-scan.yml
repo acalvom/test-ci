@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - master
+
+name: Main Workflow
+jobs:
+  sonarcloud:
+    name: Build, Test and Analyze
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@master
+      # uses: actions/checkout@v2
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  #798aedee355185eda1e09fb24f960c106cd71c7e
+      #- name: Build and Test
+       # run: make test
