@@ -5,6 +5,9 @@ const port = 8000;
 const bodyParser = require('body-parser');
 personal = require ('./app/routes/personal');
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(bodyParser.json());
 app.use(personal);
 
