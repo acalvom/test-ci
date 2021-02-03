@@ -29,7 +29,6 @@ router.get('/personal/:dni', (req, res) => {
 });
 
 router.post('/personal/dni', (req, res) => {
-    //res.send("Post Query");
     let dni = req.body.dni;
     console.log(dni);
     let sql = 'SELECT * FROM personal WHERE dni = ?';
