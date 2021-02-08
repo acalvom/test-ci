@@ -1,45 +1,47 @@
-const express = require('express')
-const router = express.Router();
-const connection = require('../database');
+var connection = require('../database');
 const DBERROR = "Database Server Error";
 
-router.get('/personal', (req, res) => {
+function listPersonal (req, res){
     var sql = 'SELECT * FROM personal';
-    connection.query(sql, function (err, rows) {
-        if(err){
+    var mycon = connection;
+    mycon.query(sql, function (err, rows) {
+        if (err) {
             res.json(DBERROR);
             console.log(err);
-        } else{
+        } else {
             res.json(rows);
         }
-    })
-});
+    });
+}
+exports.listPersonal = listPersonal;
 
-router.get('/personal/:dni', (req, res) => {
+function getPersonalByDNI (req, res){
     var dni = req.params.dni;
     var sql = 'SELECT * FROM personal WHERE dni = ?';
     connection.query(sql, [dni], function (err, rows) {
-        if(err){
+        if (err) {
             res.json(DBERROR);
             console.log(err);
-        } else{
+        } else {
             res.json(rows);
         }
     })
-});
+}
+exports.getPersonalByDNI = getPersonalByDNI;
 
-router.post('/personal/dni', (req, res) => {
+
+function postPersonalByDNI (req, res){
     let dni = req.body.dni;
     console.log(dni);
     let sql = 'SELECT * FROM personal WHERE dni = ?';
     connection.query(sql, [dni], function (err, rows) {
-        if(err){
+        if (err) {
             res.json(DBERROR);
             console.log(err);
-        } else{
+        } else {
             res.json(rows);
         }
     })
-});
+}
+exports.postPersonalByDNI = postPersonalByDNI;
 
-module.exports = router;
