@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "database": "node ./app/database.js",
-    "test": "mocha",
-    "coverage": "nyc --reporter=text --reporter=lcov npm test"
+    "test": "mocha --recursive test --reporter mochawesome --coverage"
   },
   "author": "",
   "license": "ISC",
