@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "database": "node ./app/database.js",
-    "test": "mocha --recursive test",
+    "test": "mocha",
     "coverage": "nyc --reporter=text --reporter=lcov npm test"
   },
   "author": "",
