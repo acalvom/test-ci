@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "database": "node ./app/database.js",
-    "test": "mocha app/test/*.js",
+    "test": "mocha test/*.js",
     "coverage": "nyc --reporter=lcov npm run test"
   },
   "author": "",
