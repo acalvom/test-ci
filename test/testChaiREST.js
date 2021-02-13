@@ -14,7 +14,7 @@ describe('get all personal', function () {
         chai.request(toTest)
             .get('/personal')
             .end(function (err,res) {
-                console.log(res.body)
+                //console.log(res.body)
                 expect(res).to.have.status(200);
                 expect(res.body[0]).to.have.property('nombre','Fulanito');
                 expect(res.body).to.be.a('array');
@@ -29,7 +29,7 @@ describe('get a single person', function () {
         chai.request(toTest)
             .get('/personal/111A')
             .end(function (err,res) {
-                console.log(res.body)
+                //console.log(res.body)
                 expect(res).to.have.status(200);
                 expect(res.body[0]).to.have.property('nombre','Fulanito');
                 expect(res.body[0]).to.have.property('dni','111A');
