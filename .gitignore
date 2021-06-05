@@ -42,3 +42,4 @@ Thumbs.db
 /mochawesome-report/mochawesome.json
 
 /.nyc_coverage/lcov-report/
+.env
