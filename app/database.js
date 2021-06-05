@@ -12,7 +12,7 @@ const connection = mysql.createConnection({
 // Check connection
 connection.connect(function (err){
     if(err){
-        console.log(DBERROR);
+        console.log(err);
     } else {
         console.log(DBOK);
     }

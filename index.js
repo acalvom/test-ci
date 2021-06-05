@@ -25,7 +25,7 @@ app.post('/personal/dni', personal.postPersonalByDNI);
 
 // Start the server
 app.listen(port, function() {
-    console.log("Node Server at http://localhost:" + port);
+    console.log("Node Server at " + port);
     console.log("Hora: " + Date());
 });
 
