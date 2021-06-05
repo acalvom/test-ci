@@ -3,10 +3,10 @@ const DBERROR = "Database Server Error";
 const DBOK = "Database Is Connected";
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'miw_2020',
-    password: 'miw_2020',
-    database: 'test'
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'miw_2020',
+    password: process.env.DB_PASSWORD || 'miw_2020',
+    database: process.env.DB_DATABASE || 'test'
 });
 
 // Check connection
